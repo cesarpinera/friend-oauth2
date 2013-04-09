@@ -31,8 +31,8 @@
  => "http://example.com/authenticate?redirect_uri=http%3A%2F%2F127.0.0.1%2Fredirect&client_id=my-client-id&state=anti-forgery-token")
 
 (fact
- "Replaces the authorization code"
- ((friend-oauth2/replace-authorization-code (uri-config-fixture :access-token-uri) "my-code") :code)
+ "Sets the the authorization code for the access-token-uri"
+ (:code (friend-oauth2/replace-authorization-code (uri-config-fixture :access-token-uri) "my-code"))
  => "my-code")
 
 (fact

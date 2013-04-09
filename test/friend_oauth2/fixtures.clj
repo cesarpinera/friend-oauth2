@@ -15,8 +15,7 @@
    :access-token-uri {:url "http://example.com/get-access-token"
                       :query {:client_id (client-config-fixture :client-id)
                               :client_secret (client-config-fixture :client-secret)
-                              :redirect_uri (friend-oauth2/format-config-uri client-config-fixture)
-                              :code ""}}})
+                              :redirect_uri (friend-oauth2/format-config-uri client-config-fixture)}}})
 
 ;; http://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-5.1
 (def access-token-response-fixture
